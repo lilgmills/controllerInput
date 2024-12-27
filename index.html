@@ -1,0 +1,65 @@
+<html>
+    <head> 
+        <title>
+            Controller Input
+        </title>
+        <style>
+        
+        </style>
+    </head>
+    <body style="display:flex; align-items: center; justify-content: center;">
+
+        <div div-container style="position:absolute">
+
+        </div>
+        <div style="width:100px;height:100px;background-color: grey;position:relative;" >
+        </div>
+
+
+        <script>
+            window.addEventListener("gamepadconnected", (e) => {
+                const gp = navigator.getGamepads()[e.gamepad.index];
+                console.log(
+                    `Gamepad connected at index ${gp.index}: ${gp.id} with ${gp.buttons.length} buttons, ${gp.axes.length} axes.`,
+                );
+                console.log(navigator.getGamepads())    
+                });
+
+            function updateGamepadState() {
+                const gamepads = navigator.getGamepads();
+
+                for (const gamepad of gamepads) {
+                    if (gamepad) {
+                    // Access button states
+                        // for (let i = 0; i < gamepad.buttons.length; i++) {
+                        //     if (gamepad.buttons[i].pressed) {
+                        //     console.log(`Button ${i} pressed`);
+                        //     }
+                        // }
+
+                        // Access axes values
+                        for (let i = 0; i < gamepad.axes.length; i++) {
+                            // console.log(`Axis ${i}: ${gamepad.axes[i]}`);
+
+                            div = document.querySelectorAll('div').item(1)
+                            console.log(div.offsetLeft, div.offsetTop)
+                            currentX = div.offsetLeft;
+                            currentY = div.offsetTop;
+
+                            
+                            div.style.transform = `rotate3d(0,-1,0,${45*gamepad.axes[2]}deg) rotate3d(1,0,0,${45*gamepad.axes[3]}deg)`;
+                            
+                        }
+                    }
+                }
+
+                requestAnimationFrame(updateGamepadState);
+            }
+
+            updateGamepadState();
+
+                
+            
+        </script>
+    </body>
+</html>
