@@ -34,3 +34,19 @@ body {
 #RB {
 
 }
+
+.controller {
+    position:relative;
+}
+
+.L-axis {
+    position:absolute;
+    left:16.9%;
+    top: 20.3%;
+}
+
+.R-axis {
+    position:absolute;
+    left:60%;
+    top: 43.6%;
+}
