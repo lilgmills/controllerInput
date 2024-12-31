@@ -1,0 +1,36 @@
+body {
+    display:flex; align-items: center; justify-content: center;
+}
+
+.main {
+    display:flex;
+    flex-direction: column;
+}
+
+.shoulder {
+    position: relative;
+    height: 10px;
+    
+}
+
+.L-shoulder {
+    position:absolute;
+    left:14%;
+    top:30%;
+    
+}
+
+.R-shoulder {
+    position: absolute;
+    left:66%;
+    top:30%;
+
+}
+
+#LB {
+    
+}
+
+#RB {
+
+}

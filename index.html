@@ -3,17 +3,70 @@
         <title>
             Controller Input
         </title>
-        <style>
-        
-        </style>
+        <link rel="stylesheet" href="static/style.css"/>
     </head>
-    <body style="display:flex; align-items: center; justify-content: center;">
+    <body>
+            <div class="main">
 
-        <div div-container style="position:absolute">
+                <div class="shoulder">
+                    <div class="L-shoulder">
+                        <div id="LB">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                width="0.61in" height="0.223333in"
+                                viewBox="0 0 183 67">
+                            <path id="LB"
+                                    fill="black" stroke="black" stroke-width="1"
+                                    d="M 0.00,67.00
+                                    C 12.18,56.27 34.46,48.51 50.00,43.33
+                                        90.96,29.68 139.88,22.00 183.00,22.00
+                                        177.49,19.64 170.85,20.21 161.00,15.51
+                                        151.38,10.92 147.85,4.67 143.00,2.31
+                                        138.95,0.35 126.97,0.95 122.00,1.00
+                                        97.59,1.29 62.81,12.36 42.00,24.92
+                                        36.87,28.02 28.68,34.49 24.00,38.44
+                                        16.91,44.42 2.20,58.12 0.00,67.00 Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="R-shoulder">
+                        <div id="RB">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                width="0.61in" height="0.22in"
+                                viewBox="0 0 183 66">
+                            <path id="RB"
+                                    fill="black" stroke="black" stroke-width="1"
+                                    d="M 0.00,20.00
+                                    C 3.43,21.36 6.37,20.96 10.00,21.00
+                                        10.00,21.00 20.00,21.91 20.00,21.91
+                                        20.00,21.91 42.00,23.17 42.00,23.17
+                                        76.21,26.44 113.82,34.95 146.00,46.95
+                                        156.09,50.71 175.52,57.77 182.00,66.00
+                                        182.93,61.37 178.57,57.28 175.71,54.00
+                                        168.33,45.51 159.85,37.92 151.00,31.01
+                                        128.34,13.34 87.81,0.04 59.00,0.00
+                                        59.00,0.00 50.00,0.00 50.00,0.00
+                                        34.78,0.02 37.87,4.79 26.00,12.29
+                                        18.65,16.93 8.65,19.60 0.00,20.00 Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="controller">
+                    <img src="static/xbox-main.svg">
+                    <div class="center">
 
-        </div>
-        <div style="width:100px;height:100px;background-color: grey;position:relative;" >
-        </div>
+                    </div>
+                    <div class="L-axis">
+
+                    </div>
+                    <div class="R-axis">
+
+                    </div>
+
+                </div>
+                
+            </div>
+        
 
 
         <script>
@@ -31,25 +84,46 @@
                 for (const gamepad of gamepads) {
                     if (gamepad) {
                     // Access button states
-                        // for (let i = 0; i < gamepad.buttons.length; i++) {
-                        //     if (gamepad.buttons[i].pressed) {
-                        //     console.log(`Button ${i} pressed`);
-                        //     }
-                        // }
+                        for (let i = 0; i < gamepad.buttons.length; i++) {
+                            if (i == 4) {
+                                if (gamepad.buttons[i].pressed) {
+                                    console.log("button 5 pressed");
+                                    document.getElementById('LB').querySelector('svg').querySelector('path').style.fill = 'red'
+                                    document.getElementById('LB').querySelector('svg').querySelector('path').style.stroke = 'red'
+                                }
+                                else {
+                                    document.getElementById('LB').querySelector('svg').querySelector('path').style.fill = 'black'
+                                    document.getElementById('LB').querySelector('svg').querySelector('path').style.stroke = 'black'
+                                }
+                                
+                            }
+                            if (i == 5) {
+                                if (gamepad.buttons[i].pressed) {
+                                    console.log("button 5 pressed");
+                                    document.getElementById('RB').querySelector('svg').querySelector('path').style.fill = 'red'
+                                    document.getElementById('RB').querySelector('svg').querySelector('path').style.stroke = 'red'
+                                }
+                                else {
+                                    document.getElementById('RB').querySelector('svg').querySelector('path').style.fill = 'black'
+                                    document.getElementById('RB').querySelector('svg').querySelector('path').style.stroke = 'black'
+                                }
+                                
+                            }
+                        }
 
                         // Access axes values
-                        for (let i = 0; i < gamepad.axes.length; i++) {
-                            // console.log(`Axis ${i}: ${gamepad.axes[i]}`);
+                        // for (let i = 0; i < gamepad.axes.length; i++) {
+                        //     // console.log(`Axis ${i}: ${gamepad.axes[i]}`);
 
-                            div = document.querySelectorAll('div').item(1)
-                            console.log(div.offsetLeft, div.offsetTop)
-                            currentX = div.offsetLeft;
-                            currentY = div.offsetTop;
+                        //     div = document.querySelectorAll('div').item(1)
+                        //     console.log(div.offsetLeft, div.offsetTop)
+                        //     currentX = div.offsetLeft;
+                        //     currentY = div.offsetTop;
 
                             
-                            div.style.transform = `rotate3d(0,-1,0,${45*gamepad.axes[2]}deg) rotate3d(1,0,0,${45*gamepad.axes[3]}deg)`;
+                        //     div.style.transform = `rotate3d(0,-1,0,${45*gamepad.axes[2]}deg) rotate3d(1,0,0,${45*gamepad.axes[3]}deg)`;
                             
-                        }
+                        // }
                     }
                 }
 
