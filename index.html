@@ -56,6 +56,95 @@
                     <div class="center">
 
                     </div>
+
+                    <div class="d-pad">
+                        <div class="relative-d-pad">
+                            <div id="up">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="0.153333in" height="0.23in"
+                                    viewBox="0 0 46 69">
+                                <path id="dpad up"
+                                        fill="black" stroke="black" stroke-width="1"
+                                        d="M 14.00,0.59
+                                        C 10.40,1.02 4.16,1.54 1.74,4.43
+                                            -0.69,7.33 0.00,15.19 0.00,19.00
+                                            0.00,24.27 -0.57,44.37 0.72,48.00
+                                            1.82,51.07 4.88,54.61 7.09,57.00
+                                            10.96,61.18 17.82,69.47 24.00,68.73
+                                            28.50,68.19 32.95,63.15 35.96,60.00
+                                            38.51,57.34 44.03,51.28 45.26,48.00
+                                            46.29,45.27 46.00,39.14 46.00,36.00
+                                            46.00,36.00 46.00,12.00 46.00,12.00
+                                            45.99,9.32 46.22,5.80 44.26,3.70
+                                            42.37,1.67 38.62,1.19 36.00,0.59
+                                            29.86,-0.27 20.18,-0.34 14.00,0.59 Z" />
+                                </svg>
+                            </div>
+                            <div id="right">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="0.23in" height="0.153333in"
+                                    viewBox="0 0 69 46">
+                                <path id="dpad right"
+                                        fill="black" stroke="black" stroke-width="1"
+                                        d="M 21.00,0.72
+                                        C 15.23,3.49 1.03,15.59 0.27,22.00
+                                            -0.29,26.68 3.02,29.93 6.02,33.00
+                                            9.47,36.55 17.35,44.31 22.00,45.86
+                                            23.87,46.08 27.00,46.00 29.00,45.86
+                                            29.00,45.86 56.00,45.86 56.00,45.86
+                                            58.88,46.00 63.06,46.35 65.30,44.26
+                                            68.36,41.40 68.98,31.13 69.00,27.00
+                                            69.03,21.17 69.18,5.60 64.57,1.74
+                                            62.47,-0.02 59.59,0.04 57.00,0.00
+                                            49.72,-0.10 26.72,-0.62 21.00,0.72 Z" />
+                                </svg>
+    
+                            </div>
+                            <div id="down">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="0.153333in" height="0.23in"
+                                    viewBox="0 0 46 69">
+                                <path id="dpad down"
+                                        fill="black" stroke="black" stroke-width="1"
+                                        d="M 20.00,0.74
+                                        C 14.54,3.58 2.92,15.20 0.74,21.00
+                                            -0.07,23.14 0.01,25.74 0.00,28.00
+                                            0.00,28.00 0.00,58.00 0.00,58.00
+                                            0.03,60.10 -0.03,62.77 1.17,64.58
+                                            4.39,69.41 19.57,69.02 25.00,69.00
+                                            29.61,68.98 41.25,68.18 44.26,64.57
+                                            46.31,62.12 46.00,58.03 46.00,55.00
+                                            46.00,55.00 46.00,29.00 46.00,29.00
+                                            45.99,23.68 46.27,21.59 43.06,17.00
+                                            40.29,13.05 30.28,2.31 26.00,0.74
+                                            23.56,-0.15 22.37,0.23 20.00,0.74 Z" />
+                                </svg>
+    
+                            </div>
+                            <div id="left">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="0.23in" height="0.153333in"
+                                    viewBox="0 0 69 46">
+                                <path id="dpad left"
+                                        fill="black" stroke="black" stroke-width="1"
+                                        d="M 5.22,0.74
+                                        C -1.66,5.56 -0.52,26.24 0.75,34.00
+                                            1.22,36.86 1.78,41.37 3.72,43.57
+                                            6.08,46.24 9.76,45.98 13.00,46.00
+                                            13.00,46.00 40.00,46.00 40.00,46.00
+                                            51.47,45.98 54.14,41.96 62.00,34.00
+                                            64.73,31.23 68.25,28.07 68.73,24.00
+                                            69.29,19.32 65.98,16.07 62.98,13.00
+                                            56.90,6.75 51.12,0.13 42.00,0.00
+                                            34.99,-0.09 10.46,-0.65 5.22,0.74 Z" />
+                                </svg>
+    
+                            </div>
+                            
+                        </div>
+                        
+                    
+                    </div>
                     <div class="L-axis">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             width="0.31in" height="0.31in"
@@ -123,7 +212,7 @@
                                 }
                                 
                             }
-                            if (i == 5) {
+                            else if (i == 5) {
                                 if (gamepad.buttons[i].pressed) {
                                     console.log("button 5 pressed");
                                     document.getElementById('RB').querySelector('svg').querySelector('path').style.fill = 'red'
@@ -135,6 +224,52 @@
                                 }
                                 
                             }
+                            else if (i==12) {
+                                if (gamepad.buttons[i].pressed) {
+                                    document.getElementById('up').querySelector('svg').querySelector('path').style.fill = 'red'
+                                    document.getElementById('up').querySelector('svg').querySelector('path').style.stroke = 'red'
+                                }
+                                else {
+                                    document.getElementById('up').querySelector('svg').querySelector('path').style.fill = 'black'
+                                    document.getElementById('up').querySelector('svg').querySelector('path').style.stroke = 'black'
+                                }
+                               
+                            }
+                            else if (i==13) {
+                                if (gamepad.buttons[i].pressed) {
+                                    document.getElementById('down').querySelector('svg').querySelector('path').style.fill = 'red'
+                                    document.getElementById('down').querySelector('svg').querySelector('path').style.stroke = 'red'
+                                }
+                                else {
+                                    document.getElementById('down').querySelector('svg').querySelector('path').style.fill = 'black'
+                                    document.getElementById('down').querySelector('svg').querySelector('path').style.stroke = 'black'
+                                }
+                               
+                            }
+                            else if (i==14) {
+                                if (gamepad.buttons[i].pressed) {
+                                    document.getElementById('left').querySelector('svg').querySelector('path').style.fill = 'red'
+                                    document.getElementById('left').querySelector('svg').querySelector('path').style.stroke = 'red'
+                                }
+                                else {
+                                    document.getElementById('left').querySelector('svg').querySelector('path').style.fill = 'black'
+                                    document.getElementById('left').querySelector('svg').querySelector('path').style.stroke = 'black'
+                                }
+                               
+                            }
+                            else if (i==15) {
+                                if (gamepad.buttons[i].pressed) {
+                                    document.getElementById('right').querySelector('svg').querySelector('path').style.fill = 'red'
+                                    document.getElementById('right').querySelector('svg').querySelector('path').style.stroke = 'red'
+                                }
+                                else {
+                                    document.getElementById('right').querySelector('svg').querySelector('path').style.fill = 'black'
+                                    document.getElementById('right').querySelector('svg').querySelector('path').style.stroke = 'black'
+                                }
+                               
+                            }
+                            
+                            
                         }
 
                         // Access axes values

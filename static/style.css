@@ -50,3 +50,35 @@ body {
     left:60%;
     top: 43.6%;
 }
+
+.d-pad {
+    position: absolute;
+    left: 34.2%;
+    top: 37.5%;
+}
+
+.relative-d-pad {
+    position: relative;
+}
+
+#up, #right, #left, #down {
+    position: absolute;
+    
+}
+
+#left, #right {
+    top: 17px;
+} 
+#left {
+    
+    left: -17px;
+}
+
+#down {
+    top: 27px;
+}
+
+#right {
+    left: 10px;
+}
+
