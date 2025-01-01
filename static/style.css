@@ -41,14 +41,14 @@ body {
 
 .L-axis {
     position:absolute;
-    left:16.9%;
+    left:17%;
     top: 20.3%;
 }
 
 .R-axis {
     position:absolute;
-    left:60%;
-    top: 43.6%;
+    left:60.1%;
+    top: 43.75%;
 }
 
 .d-pad {
@@ -80,5 +80,61 @@ body {
 
 #right {
     left: 10px;
+}
+
+.buttons {
+    position: relative;
+    left:73.65%;
+    top: -158.2px;
+}
+
+#Y, #B, #X, #A {
+    position: absolute;
+}
+
+#X, #B {
+    top: 15.8px;
+}
+
+#B {
+    left:14.8px;
+    top: 16.5px;
+   
+}
+
+#A {
+    left: -0.4px;
+    top:32.1px;
+}
+
+#X {
+    left: -15.4px;
+}
+
+.center {
+    position: relative;
+    top: -166.75px;
+    left:138px;
+
+}
+
+#XBOX, #view, #share, #menu {
+    position:absolute;
+}
+
+#view {
+    top:27px;
+    left:-18.25px;
+
+}
+
+#menu {
+    top:27.4px;
+    left:25.8px;
+}
+
+#share {
+    top:41.35px;
+    left:2.1875px;
 }
 
