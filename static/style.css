@@ -1,5 +1,21 @@
+:root {
+    --Primary-color : black;
+    --Active: rgb(79, 214, 255);
+    opacity:50%;
+}
+
 body {
     display:flex; align-items: center; justify-content: center;
+}
+
+.active {
+    fill: var(--Active);
+    stroke: var(--Active);
+}
+
+.inactive {
+    fill: var(--Primary-color);
+    stroke: var(--Primary-color);
 }
 
 .main {
